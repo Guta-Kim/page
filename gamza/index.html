@@ -17,30 +17,32 @@
 </head>
 
 <body>
-	<div id="wrapper">
-		<header>
-			<h1>항구의 감자</h1>
-			<span>성격도 화끈하다네</span>
-		</header>
-
-		<main id="main">
-			<div class="slick">
-				<img src="/page/gamza/g06.jpg" alt="">
-				<img src="/page/gamza/g05.jpg" alt="">
-				<img src="/page/gamza/g04.jpg" alt="">
-				<img src="/page/gamza/g03.jpg" alt="">
-				<img src="/page/gamza/g02.jpg" alt="">
-				<img src="/page/gamza/g01.jpg" alt="">
-			</div>
-		</main>	
-
-		<footer>
-			<h1>항구의 감자</h1>
-			<address>
-				<span><em>Address</em><br> Donghae-daero, Donghae-si <br>Gangwon-do <br> Republick of korea</span> 
-				<span>ⓒ GamZa &nbsp; All Rights Reserved</span>
-			</address>
-		</footer>
+	<div id="bg-bx">
+		<div id="wrapper">
+			<header>
+				<h1>항구의 감자</h1>
+				<span>성격도 화끈하다네</span>
+			</header>
+	
+			<main id="main">
+				<div class="slick">
+					<img src="/page/gamza/g06.jpg" alt="">
+					<img src="/page/gamza/g05.jpg" alt="">
+					<img src="/page/gamza/g04.jpg" alt="">
+					<img src="/page/gamza/g03.jpg" alt="">
+					<img src="/page/gamza/g02.jpg" alt="">
+					<img src="/page/gamza/g01.jpg" alt="">
+				</div>
+			</main>	
+	
+			<footer>
+				<h1>항구의 감자</h1>
+				<address>
+					<span><em>Address</em>Donghae-daero, Donghae-si <br>Gangwon-do <br> Republick of korea</span> 
+					<span>ⓒ GamZa &nbsp; All Rights Reserved</span>
+				</address>
+			</footer>
+		</div>
 	</div>
 </body>
 </html>
@@ -65,8 +67,10 @@
 	.slick-dots li.slick-active{transform:scale(1);margin:0 3px;}
 	.slick-dots li a{display:block;width:60px;height:60px;}
 	.slick-dots img{display:block;width:100%;height:100%;object-fit:cover;}
-	html, body{font-family:'S-CoreDream';font-size:10px;line-height:1.5;background:#222;}
-	#wrapper{max-width:1200px;margin:0 auto;min-height:100vh;overflow:hidden;color:#fff;background:#000;box-shadow:0px 0px 25px 0px rgba(0,0,0,1);display: flex;flex-direction: column;justify-content: center;}
+	html, body{font-family:'S-CoreDream';font-size:10px;line-height:1.5;}
+	#bg-bx{position:relative;}
+	#bg-bx:before{content:'';z-index:-1;display:block;position:absolute;top:0;left:0;right:0;bottom:0;background:url(/page/gamza/bg01.jpg) no-repeat center center /cover;filter:brightness(.7) contrast(1.2) grayscale(.2);}
+	#wrapper{max-width:1200px;margin:0 auto;min-height:100vh;overflow:hidden;color:#fff;background:rgba(0,0,0,.5);box-shadow:0px 0px 15px 3px rgba(0,0,0,1);display: flex;flex-direction: column;justify-content: center;backdrop-filter:blur(3px);}
 	header{align-items:center;height:11rem;justify-content:center;font-weight:500;font-size:3rem;display:flex;flex-direction: column;}
 	header h1{animation:logo-move1 5s infinite alternate ease-out;}
 	header span{font-weight:400;font-size:1.6rem;margin-top:.3rem}
@@ -109,7 +113,6 @@ $(function() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-	swipeToSlide:true,
         pauseOnHover: false,
         speed: 350,
         autoplaySpeed: 3000,
