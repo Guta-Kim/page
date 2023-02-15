@@ -72,8 +72,8 @@
 	.slick-slider.slick-initialized .slick-list .slick-track .slick-slide{display:block}
 	.slick-slider .slick-list .slick-track.slick-loading .slick-slide{visibility:hidden}
 	.slick-slider .slick-arrow.slick-hidden{display:none}
-	.slick-dots{display:flex;justify-content:center;align-items:center;}
-	.slick-dots li{transition:transform .3s;transform:scale(.8);margin:0 0px}
+	.slick-dots{display:flex;justify-content:center;align-items:center;padding:0 50px;flex-wrap:wrap;}
+	.slick-dots li{transition:transform .3s;transform:scale(.8);margin:0 0px;display:flex;align-itmes:center;flex-grow:0;}
 	.slick-dots li.slick-active{transform:scale(1);margin:0 3px;}
 	.slick-dots li a{display:block;width:60px;height:60px;}
 	.slick-dots img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;}
@@ -103,7 +103,7 @@
 		.slick-slide{height:405px;}
 		.slick-dots{padding:0 30px;flex-wrap:wrap;}
 		.slick-dots::-webkit-scrollbar{display:none;}
-		.slick-dots li{display:flex;align-itmes:center;width:36px;flex-grow:0;}
+		.slick-dots li{width:36px;}
 		.slick-dots li a{width:30px;height:30px;}	
 	}
 </style>
